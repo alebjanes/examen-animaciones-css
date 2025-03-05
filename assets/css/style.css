@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+    'nav'
+    'header'
+    'gallery'
+    'about'
+    'footer';
+    grid-template-rows: auto 3fr auto auto 1fr;
+}
+
+.hidden {
+    display: none;
+}
+
+/* nav */
+
+nav {
+    grid-area: nav;
+    background-color: rgb(0, 0, 0);
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(236, 234, 233)
+}
+
+nav img {
+    width: 40px;
+    height: 40px;
+}
+
+.title {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* header */
+
+header {
+    grid-area: header;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url('../img/header.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(236, 234, 233);
+}
+
+/* gallery */
+
+.gallery {
+    grid-area: gallery;
+    background-color: rgb(236, 234, 233);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery img {
+    max-width: 300px;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease-in-out;
+}
+
+.gallery img:hover {
+    filter: grayscale(0%);
+}
+
+/* about */
+
+.about {
+    grid-area: about;
+    background-color: rgb(236, 234, 233);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+/* footer */
+
+footer {
+    grid-area: footer;
+    background-color: rgb(86, 86, 86);
+    color: rgb(236, 234, 233);
+    padding: 30px;
+}
+
+footer p {
+    margin: 5px;
+    line-height: 1.5em;
+}
+
+.contact-us {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-us i {
+    font-size: 1em;
+    margin-right: 10px;
+}
+
+.visit-us {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.visit-us i {
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+.visit-us a {
+    color: rgb(236, 234, 233);
+    text-decoration: none;
+}
+
+@media (min-width: 567px) {
+    
+    .hidden {
+        display: flex;
+    }
+
+    /* nav */
+    
+    .nav-menu-logo {
+        display: none;
+    }
+    
+    .nav-menu {
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-menu {
+        list-style-type: none;
+    }
+
+    .nav-menu a {
+        text-decoration: none;
+        color: rgb(236, 234, 233);
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: rgb(236, 234, 233)
+    }
+
+    /* gallery */
+    
+    .gallery {
+        padding: 30px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px
+    }
+
+    /* footer */
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    footer h4 {
+        margin-top: 0;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    body {
+        padding-left: 260px;
+        grid-template-areas:
+        'nav header'
+        'nav gallery'
+        'nav about'
+        'nav footer';
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: auto auto;
+    }
+
+    /* nav */
+
+    nav {
+        position: fixed;
+        width: 210px;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* header */
+
+    header {
+        height: 600px;
+    }
+
+}
