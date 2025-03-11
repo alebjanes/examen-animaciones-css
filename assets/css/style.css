@@ -121,16 +121,21 @@ footer p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .visit-us i {
     font-size: 2em;
-    margin-right: 10px;
 }
 
 .visit-us a {
     color: rgb(236, 234, 233);
     text-decoration: none;
+}
+
+.visit-us-icons {
+    display: flex;
+    gap: 10px;
 }
 
 @media (min-width: 567px) {
